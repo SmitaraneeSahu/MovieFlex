@@ -1,6 +1,7 @@
 import React from 'react'
 
 export default function WatchList() {
+  
 const watchlist = JSON.parse(localStorage.getItem('watchlist')) || [];
 function removeFromWatchlist(movieId) {
   const watchlist = JSON.parse(localStorage.getItem('watchlist')) || [];
@@ -9,6 +10,7 @@ function removeFromWatchlist(movieId) {
 }  
 
 return (
+  <main>
   <div>
     <h2>Your Watchlist</h2>
     {watchlist.map(movie => (
@@ -18,5 +20,6 @@ return (
       </div>
     ))}
   </div>
+  </main>
 );
 }
