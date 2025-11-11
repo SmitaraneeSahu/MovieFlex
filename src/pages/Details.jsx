@@ -92,11 +92,12 @@ export default function Details({darkMode}) {
             <a href={`https://www.imdb.com/title/${d.imdb_id}`} target='_blank' rel='noreferrer'>{d.imdb_id} </a>
           </p>
           <div>
-            <button onClick={() => addToWatchlist(movie)}>Add to Watchlist</button>
+            <button className='bg-gray-600 text-white px-2 py-1 ' onClick={() => addToWatchlist(movie)}>Add to Watchlist</button>
           </div>
         </div>
       </section>
     </main>
   )
 }
+
 
