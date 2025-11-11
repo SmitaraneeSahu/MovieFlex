@@ -1,6 +1,6 @@
 
 import React from 'react'
-import useFetch from '../../hooks/useFetch'
+import useFetch from '../hooks/useFetch'
 import Card from '../components/Card'
 import { useSearchParams } from 'react-router-dom';
 
@@ -22,3 +22,4 @@ export default function Search({apiPath, darkMode}) {
       </main>
     )
 }
+
