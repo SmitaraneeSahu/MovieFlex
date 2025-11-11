@@ -2,7 +2,7 @@ import React from 'react'
 import Card from '../components/Card'
 export default function WatchList({darkMode}) {
   
-// const watchlist = JSON.parse(localStorage.getItem('watchlist')) || [];
+const watchlist = JSON.parse(localStorage.getItem('watchlist')) || [];
 function removeFromWatchlist(movieId) {
   const watchlist = JSON.parse(localStorage.getItem('watchlist')) || [];
   const updated = watchlist.filter(item => item.id !== movieId);
