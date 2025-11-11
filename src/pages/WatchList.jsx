@@ -2,6 +2,11 @@ import React from 'react'
 
 export default function WatchList() {
 const watchlist = JSON.parse(localStorage.getItem('watchlist')) || [];
+function removeFromWatchlist(movieId) {
+  const watchlist = JSON.parse(localStorage.getItem('watchlist')) || [];
+  const updated = watchlist.filter(item => item.id !== movieId);
+  localStorage.setItem('watchlist', JSON.stringify(updated));
+}  
 
 return (
   <div>
