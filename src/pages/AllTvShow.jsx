@@ -1,5 +1,5 @@
 import React from 'react'
-import useFetch from '../../hooks/useFetch'
+import useFetch from '../hooks/useFetch'
 import Card from '../components/Card'
 
 export default function AllTvShow({apiPath, darkMode}) {
@@ -15,3 +15,4 @@ export default function AllTvShow({apiPath, darkMode}) {
       </main>
     )
 }
+
