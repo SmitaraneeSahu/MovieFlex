@@ -5,7 +5,7 @@ export default function useFetch(apiPath, queryTerm="", deps = []) {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const API_KEY = import.meta.env.VITE_API_KEY;
-  const url = `https://api.themoviedb.org/3/${apiPath}?api_key=${API_KEY}&with_original_language=hi&release_date.lte=2025-11-01&sort_by=popularity.desc&page=${page}&query=${queryTerm}`
+  const url = `https://api.themoviedb.org/3/${apiPath}?api_key=${API_KEY}&with_original_language=hi&release_date.gte=2020-01-01&sort_by=popularity.desc&page=${page}&query=${queryTerm}`
   
   useEffect(() => {
     setData([]);
@@ -62,4 +62,5 @@ export default function useFetch(apiPath, queryTerm="", deps = []) {
     {data, loading}
   )
 }
+
 
