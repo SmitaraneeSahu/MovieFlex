@@ -12,11 +12,12 @@ export default function AllRoutes({darkMode}) {
         <Route path="Series" element={<AllSeries apiPath="discover/tv"/>}/>
         <Route path="TvShow" element={<AllTvShow apiPath="discover/tv"/>}/>
         <Route path="Search" element={<Search apiPath="search/multi"/>}/>
-        <Route path="MyWatchlist" element={<WatchList/>}/>
+        <Route path="watchlist" element={<WatchList/>}/>
         <Route path="*" element={<PageNotFound/>}/>
     </Routes>
     </div>
   )
 }
+
 
 
