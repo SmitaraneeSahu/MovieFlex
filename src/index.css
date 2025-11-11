@@ -1,0 +1,96 @@
+
+/* @tailwind base; 
+@tailwind components; 
+@tailwind utilities;  */
+/* @import "tailwindcss/preflight";
+@import "tailwindcss/utilities";*/
+/* body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  } */
+
+/* :root {
+  --background-color: #ffffff;
+  --text-color: #333333;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #1a1a1a;
+    --text-color: #ffffff;
+  }
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+} */
+
+
+:root {
+  --navbar-bg: #ffffff;
+  --title-color: #000000;
+}
+
+.dark {
+  --navbar-bg: #1e293b;
+  --title-color: #ffffff;
+}
+
+main{
+    max-width: 1280px;
+    min-height: 90vh;
+    padding: 10px;
+}
+ 
+/* Default Light Theme */
+body {
+  background-color: #ffffff;
+  color: #000000;
+  /* transition: background-color 0.3s ease, color 0.3s ease; */
+}
+
+footer {
+  background-color: #ffffff;
+  color: #333333;
+  text-align: center;
+  border-top: solid #cbcbcb78;
+}
+
+header {
+  background-color: #ffffff;
+  color: #333333;
+  border-bottom: solid #cbcbcb78;
+  /* transition: background-color 0.3s ease, color 0.3s ease; */
+}
+
+
+/* .dark{
+  background-color: #111827;
+  color: #f1f1f1;
+} */
+
+.dark body {
+  background-color: #111827; 
+  color: #f9fafb; 
+}
+.dark header {
+background-color: #1f2937; /* Dark gray */
+color: #f9fafb; /* Light text */
+border-bottom: none;
+}
+.dark footer {
+  background-color: #1f2937; /* Footer dark gray */
+  color: #f9fafb;
+  border-bottom: none;
+}
+
