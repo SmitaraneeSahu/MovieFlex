@@ -14,8 +14,8 @@ export default function Home({darkMode}) {
     useEffect(()=>{
       async function fetchHome(page){
         try{
-        const movieUrl = `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&with_original_language=hi&release_date.lte=2025-11-01&sort_by=release_date.desc&page=${page}`;
-        const tvUrl = `https://api.themoviedb.org/3/discover/tv?api_key=${API_KEY}&with_original_language=hi&release_date.lte=2025-11-01&sort_by=release_date.desc&page=${page}`;
+        const movieUrl = `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&with_original_language=hi&release_date.gte=2000-01-01&sort_by=popularity.desc&page=${page}`;
+        const tvUrl = `https://api.themoviedb.org/3/discover/tv?api_key=${API_KEY}&with_original_language=hi&release_date.gte=2000-01-01&sort_by=popularity.desc&page=${page}`;
         // if (!response.ok) throw new Error("Failed to fetch TMDB data")
         const [movieRes,  tvRes] = await Promise.all([fetch(movieUrl), fetch(tvUrl)]);
         const [movieData,  tvData] = await Promise.all([movieRes.json(), tvRes.json()]);
@@ -82,3 +82,4 @@ export default function Home({darkMode}) {
     </main>
   )
 }
+
