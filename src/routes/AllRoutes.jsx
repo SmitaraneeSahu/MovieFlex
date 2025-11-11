@@ -1,5 +1,5 @@
 import {Routes, Route} from "react-router-dom";
-import {Home, Search, profile, PageNotFound, Details, AllMovie, AllSeries, AllTvShow} from  "../pages";
+import {Home, Search, profile, PageNotFound, Details, AllMovie, AllSeries, AllTvShow, WatchList} from  "../pages";
 
 
 export default function AllRoutes({darkMode}) {
@@ -18,4 +18,5 @@ export default function AllRoutes({darkMode}) {
     </div>
   )
 }
+
 
