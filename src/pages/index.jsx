@@ -5,4 +5,5 @@ export {default as AllSeries} from "./AllSeries";
 export {default as AllTvShow} from "./AllTvShow";
 export {default as profile} from "./profile";
 export {default as Details} from "./Details";
+export {default as WatchList} from "./WatchList";
 export {default as PageNotFound} from "./PageNotFound";
