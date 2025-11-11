@@ -40,6 +40,18 @@ export default function Details({darkMode}) {
   if (status=== "error") return <div>Error loading details</div>;
   const d = result;
   const image = `https://image.tmdb.org/t/p/w500/${d.poster_path}`
+
+  function addToWatchlist(movie) {
+  const watchlist = JSON.parse(localStorage.getItem('watchlist')) || [];
+  const exists = watchlist.find(item => item.id === movie.id);
+  if (!exists) {
+    watchlist.push(movie);
+    localStorage.setItem('watchlist', JSON.stringify(watchlist));
+    alert('Added to Watchlist!');
+  } else {
+    alert('Already in Watchlist');
+  }
+}  
   return (
     <main>
       <section className='flex justify-around flex-wrap py-5'>
@@ -79,8 +91,12 @@ export default function Details({darkMode}) {
             <span className='mr-2 font-bold'>IMDB:</span>
             <a href={`https://www.imdb.com/title/${d.imdb_id}`} target='_blank' rel='noreferrer'>{d.imdb_id} </a>
           </p>
+          <div>
+            <button onClick={() => addToWatchlist(movie)}>Add to Watchlist</button>
+          </div>
         </div>
       </section>
     </main>
   )
 }
+
